@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TelegramBot.Models
+﻿namespace TelegramBot.Models
 {
-    public class User
+    public class User: Person
     {
+        public long Id { get; set; }
+        public string? Email { get; set; }
+        public bool IsPremiumActive { get; set; }
+        public List<int> TraiderIds { get; set; }
+        public bool IsAdmin { get; set; }
+        public User() 
+        { 
+            TraiderIds = new List<int>();
+        }
     }
 }
